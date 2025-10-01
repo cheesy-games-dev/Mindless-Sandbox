@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb506cbd3d1f03443a057eef37727c44, type: 3}
+  m_Name: cheesy.mindlesssandbox.deathragdoll.crate
+  m_EditorClassIdentifier: 
+  barcode: cheesy.mindlesssandbox.deathragdoll
+  Title: DeathRagdoll
+  Description: Description of the crate.
+  Redacted: 0
+  Tags: []
+  Pallet: {fileID: 11400000, guid: c27b2b52de1c9224d9a31d42db4db690, type: 2}
+  gizmoColor: {r: 1, g: 1, b: 1, a: 1}
+  combinedMesh: {fileID: 0}
+  _crateReference: {fileID: 2794103787830521219, guid: 825a5991068e4dd4d982e6b7c25f4c3e, type: 3}
