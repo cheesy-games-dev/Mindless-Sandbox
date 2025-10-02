@@ -8,25 +8,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_MindlessAssets/_Levels/Redacted/Lobby.unity
     guid: ff8f97e485791f441a53a9257f191ff6
-  - enabled: 1
+  - enabled: 0
     path: Assets/_MindlessAssets/_Levels/sb_playground.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/_MindlessAssets/_Levels/dm_nightmaze.unity
     guid: 5521ba22bd38d094f9ab6e926cb46e1f
-  - enabled: 1
+  - enabled: 0
     path: Assets/_MindlessAssets/_Levels/sb_nightmaze.unity
     guid: 1dea04a011076e24e981e0667557fe47
-  - enabled: 1
+  - enabled: 0
     path: Assets/_MindlessAssets/_Levels/sb_og_playground.unity
     guid: c0bbd31acaeca434ba78d881afe56118
-  - enabled: 1
+  - enabled: 0
     path: Assets/_MindlessAssets/_Levels/sb_the_void.unity
     guid: 53d3788025a54974f8ec4fbe22f8c521
-  - enabled: 1
+  - enabled: 0
     path: Assets/_MindlessAssets/_Levels/dm_finalmap.unity
     guid: 22280d6f713a2fd468e9e10e2530bbdf
-  - enabled: 1
+  - enabled: 0
     path: Assets/_MindlessAssets/_Levels/sb_finalmap.unity
     guid: 0c764a91fd017d04794c7adef96be340
   - enabled: 1

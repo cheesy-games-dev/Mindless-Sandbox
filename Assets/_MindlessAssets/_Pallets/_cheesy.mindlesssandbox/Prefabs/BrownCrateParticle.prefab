@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6493679123861355194}
   - component: {fileID: 1192065930305420887}
   - component: {fileID: 7082435060957370646}
-  - component: {fileID: 6705144329659208876}
-  - component: {fileID: 7743758510601452647}
+  - component: {fileID: 7692195506536511747}
+  - component: {fileID: 6541348770790893433}
   m_Layer: 3
   m_Name: BrownCrateParticle
   m_TagString: Untagged
@@ -4893,7 +4893,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &6705144329659208876
+--- !u!114 &7692195506536511747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4906,11 +4906,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodies: []
-  behaviours:
-  - {fileID: 7743758510601452647}
+  behaviours: []
   colliders: []
-  poolee: {fileID: 7743758510601452647}
---- !u!114 &7743758510601452647
+  poolee: {fileID: 0}
+--- !u!114 &6541348770790893433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Pallet
   m_GUID: f0bcb417c49a86e459d18fbb3250ba6f
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: c27b2b52de1c9224d9a31d42db4db690
+    m_Address: cheesy.mindlesssandbox.pallet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1082909529f99a8449e97fb99dbfcb99, type: 2}
   m_SchemaSet:

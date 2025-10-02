@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2558087078502128423}
   - component: {fileID: 7579006750364707677}
   - component: {fileID: 2241563591604638704}
-  - component: {fileID: 1966969152925164911}
-  - component: {fileID: 6481818086853728990}
+  - component: {fileID: 780236397723776440}
+  - component: {fileID: 5701957022784555559}
   m_Layer: 5
   m_Name: Chat Item
   m_TagString: Untagged
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1966969152925164911
+--- !u!114 &780236397723776440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,31 +88,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3513621825607090464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30b6802be1bc0f4b8665a72bdf44a54, type: 3}
+  m_Script: {fileID: 11500000, guid: 6894d6e2ea70a4c4b8ebe1edfcf6bdd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messenger_TMP: {fileID: 5802639133610873763}
-  message_TMP: {fileID: 8358301905151271471}
-  nonoWords:
-  - Fuck
-  - Bitch
-  - Cunt
-  - Prick
-  - Hoe
-  - Whore
-  - Bastard
-  - Cock
-  - Shit
-  - Dick
-  - Nigger
-  - Address
-  - Home
-  - State
-  - County
-  - Twat
-  - Number
-  - Ass
---- !u!114 &6481818086853728990
+  bodies: []
+  behaviours:
+  - {fileID: 5701957022784555559}
+  colliders: []
+  poolee: {fileID: 5701957022784555559}
+--- !u!114 &5701957022784555559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,10 +105,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3513621825607090464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fb1bd5cea48d094fa04f8926c0992c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4890ee0afb057f64ebdfb983d4904d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeUntilDeletion: 30
+  isSpawned: 0
 --- !u!1 &4260742545262104069
 GameObject:
   m_ObjectHideFlags: 0

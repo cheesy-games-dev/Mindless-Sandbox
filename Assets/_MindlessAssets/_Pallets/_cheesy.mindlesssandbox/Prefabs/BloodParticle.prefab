@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6493679123861355194}
   - component: {fileID: 1192065930305420887}
   - component: {fileID: 7082435060957370646}
-  - component: {fileID: 5713182236691828570}
-  - component: {fileID: 5549547894774756593}
+  - component: {fileID: 7034568804259411584}
+  - component: {fileID: 6450008121516333836}
   m_Layer: 3
   m_Name: BloodParticle
   m_TagString: Untagged
@@ -4893,7 +4893,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &5713182236691828570
+--- !u!114 &7034568804259411584
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4906,10 +4906,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodies: []
-  behaviours: []
+  behaviours:
+  - {fileID: 6450008121516333836}
   colliders: []
-  poolee: {fileID: 0}
---- !u!114 &5549547894774756593
+  poolee: {fileID: 6450008121516333836}
+--- !u!114 &6450008121516333836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

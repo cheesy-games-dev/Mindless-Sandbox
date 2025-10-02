@@ -11,10 +11,7 @@ GameObject:
   - component: {fileID: 1900673958284747420}
   - component: {fileID: -5334531882392741114}
   - component: {fileID: 4502453481880946360}
-  - component: {fileID: 7766511729639926356}
   - component: {fileID: 2086526529694889432}
-  - component: {fileID: 8469492402417772217}
-  - component: {fileID: -9155027722628443801}
   m_Layer: 0
   m_Name: Spray Paint
   m_TagString: Untagged
@@ -4895,19 +4892,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &7766511729639926356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4513546007993667567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fb1bd5cea48d094fa04f8926c0992c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeUntilDeletion: 2
 --- !u!82 &2086526529694889432
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4918,7 +4902,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6673405502460083346, guid: db0ab4b14a4240d47a2280ca7c0d15cd, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 7339cb90cc09f0346b328f2c16c42ff6, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7339cb90cc09f0346b328f2c16c42ff6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.6
@@ -5005,37 +4989,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8469492402417772217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4513546007993667567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 1
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &-9155027722628443801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4513546007993667567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe37f0a1ecd7ef94da249d338068068b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

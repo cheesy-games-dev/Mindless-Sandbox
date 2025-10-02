@@ -13,12 +13,11 @@ GameObject:
   - component: {fileID: 5858182549617499335}
   - component: {fileID: 5037962785176290274}
   - component: {fileID: 5216090602626030315}
-  - component: {fileID: 5420259167029929832}
-  - component: {fileID: 8311534818687831075}
-  - component: {fileID: 1737458482344632772}
   - component: {fileID: 789225336933839817}
   - component: {fileID: 1014105009288186969}
-  - component: {fileID: 1335634612263618636}
+  - component: {fileID: 2409978675043296689}
+  - component: {fileID: 755421479908864943}
+  - component: {fileID: 5459346304843587374}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Untagged
@@ -124,10 +123,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109126340251091494}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1.5
-  m_Drag: 0
-  m_AngularDrag: 0.5
+  m_LinearDamping: 0
+  m_AngularDamping: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -144,62 +143,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &5420259167029929832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109126340251091494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 1
-  observableSearch: 2
-  ObservedComponents:
-  - {fileID: 8311534818687831075}
-  - {fileID: 1737458482344632772}
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &8311534818687831075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109126340251091494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
---- !u!114 &1737458482344632772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109126340251091494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
-  m_TeleportEnabled: 1
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &789225336933839817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +159,9 @@ MonoBehaviour:
   radius: 6
   force: 1000
   damage: 50
+  explosionVFX:
+    barcode: 
+    crate: {fileID: 0}
   explosionEffect: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
 --- !u!82 &1014105009288186969
 AudioSource:
@@ -227,7 +173,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6673405502460083346, guid: db0ab4b14a4240d47a2280ca7c0d15cd, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c0950445ce995a9458f77a5b892d1c41, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c0950445ce995a9458f77a5b892d1c41, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.65
@@ -314,7 +260,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1335634612263618636
+--- !u!114 &2409978675043296689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,9 +269,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 109126340251091494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe37f0a1ecd7ef94da249d338068068b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6894d6e2ea70a4c4b8ebe1edfcf6bdd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bodies:
+  - {fileID: 5459346304843587374}
+  behaviours:
+  - {fileID: 755421479908864943}
+  - {fileID: 5459346304843587374}
+  colliders:
+  - {fileID: 5037962785176290274}
+  poolee: {fileID: 755421479908864943}
+--- !u!114 &755421479908864943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109126340251091494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4890ee0afb057f64ebdfb983d4904d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSpawned: 0
+--- !u!114 &5459346304843587374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109126340251091494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9700fd67bf57d874a81e1f4c3e88e9c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rigidbody: {fileID: 0}
+  ArticulationBody: {fileID: 0}
 --- !u!1 &8308277272653621431
 GameObject:
   m_ObjectHideFlags: 0

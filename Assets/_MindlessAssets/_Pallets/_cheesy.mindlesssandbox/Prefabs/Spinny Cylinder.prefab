@@ -699,12 +699,8 @@ GameObject:
   - component: {fileID: 4750586865516593254}
   - component: {fileID: 2960815732166973358}
   - component: {fileID: 1259886766539871498}
-  - component: {fileID: 2709316023743999887}
-  - component: {fileID: 6496178700118926615}
-  - component: {fileID: 1734078287686285932}
   - component: {fileID: 7214552348738667192}
-  - component: {fileID: 4214058780999944487}
-  - component: {fileID: -8604670585671338820}
+  - component: {fileID: 4920097805927329748}
   m_Layer: 3
   m_Name: Spinny Cylinder
   m_TagString: Untagged
@@ -792,62 +788,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAmount: 0
   resetSpeedCooldown: 20
---- !u!114 &2709316023743999887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7670768242354214166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 1
-  observableSearch: 2
-  ObservedComponents:
-  - {fileID: 6496178700118926615}
-  - {fileID: 1734078287686285932}
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &6496178700118926615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7670768242354214166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 0
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
---- !u!114 &1734078287686285932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7670768242354214166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &7214552348738667192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,35 +801,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onPressedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    _PersistentCalls: []
   onPerformedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1259886766539871498}
-        m_TargetAssemblyTypeName: RotatePanoramaCamera, Assembly-CSharp
-        m_MethodName: ChangeSpeed
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 25
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+    _PersistentCalls: []
   onReleasedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    _PersistentCalls: []
   ToggleOn:
-    m_PersistentCalls:
-      m_Calls: []
+    _PersistentCalls: []
   ToggleOff:
-    m_PersistentCalls:
-      m_Calls: []
+    _PersistentCalls: []
+  Toggled:
+    _PersistentCalls: []
   isToggleInteractable: 0
   isToggled: 0
---- !u!114 &4214058780999944487
+--- !u!114 &4920097805927329748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -898,26 +823,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7670768242354214166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea6c46eab6fa41b4fb7da822422882c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6894d6e2ea70a4c4b8ebe1edfcf6bdd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStatic: 1
-  getPhotonViewAutomatically: 1
-  photonView: {fileID: 0}
-  transformView: {fileID: 0}
-  rigidbodyView: {fileID: 0}
---- !u!114 &-8604670585671338820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7670768242354214166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe37f0a1ecd7ef94da249d338068068b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  bodies: []
+  behaviours: []
+  colliders: []
+  poolee: {fileID: 0}
 --- !u!1 &7676186196008879947
 GameObject:
   m_ObjectHideFlags: 0
