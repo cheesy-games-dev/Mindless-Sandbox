@@ -24,14 +24,13 @@ public class Gun : MonoBehaviour, ICrateBarcode
     {
         ammo.Reloading = false;
 
-        OnValidate();
+        Validate();
     }
 
-    private void OnValidate()
+    public void Validate()
     {
         if (gun.MuzzleFlash.Crate)
             gun.MuzzleFlash.Barcode = gun.MuzzleFlash.Crate.Barcode;
-        gameObject.name = $"Crate Spawner ({gun.MuzzleFlash.Barcode})";
         AssetWarehouse.Instance.TryGetCrate<Crate>(gun.MuzzleFlash.Barcode, out var crate);
     }
 
@@ -107,12 +106,7 @@ public class Gun : MonoBehaviour, ICrateBarcode
 
     public void Start()
     {
-        OnValidate();
-    }
-
-    void ICrateBarcode.OnValidate()
-    {
-        OnValidate();
+        Validate();
     }
 }
 

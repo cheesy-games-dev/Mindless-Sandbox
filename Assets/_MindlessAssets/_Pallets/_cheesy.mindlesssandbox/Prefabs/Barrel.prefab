@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 9131988686621774299}
   - component: {fileID: 7210294387334240772}
   m_Layer: 0
-  m_Name: Barrel
+  m_Name: Crate Spawner ()
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,8 +170,8 @@ MonoBehaviour:
   force: 2000
   damage: 50
   explosionVFX:
-    _barcode: 
-    _crate: {fileID: 0}
+    barcode: 
+    crate: {fileID: 0}
   explosionEffect: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
 --- !u!114 &6025388705582591073
 MonoBehaviour:

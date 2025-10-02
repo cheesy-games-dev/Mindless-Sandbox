@@ -243,12 +243,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3922694262320455388}
-  - component: {fileID: 3536184099197560081}
   - component: {fileID: 3935691457351749373}
   - component: {fileID: 7878642502320473247}
-  - component: {fileID: 4069196928198082195}
   m_Layer: 0
-  m_Name: AssaultRifle
+  m_Name: AR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,28 +271,6 @@ Transform:
   - {fileID: 5242079811470874772}
   m_Father: {fileID: 7985684237217284468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &3536184099197560081
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4412372088613143654}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 019389da2b24bf0448faac7910daeb49, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &3935691457351749373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,66 +283,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064370a83d68ef34ba6761a444b0d821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holderAnimator: {fileID: 0}
-  shootInput:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Shoot Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: d7c957c9-43a1-4628-94f6-1d98973794e4
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 636311796354552635, guid: 1c2a98e093ca7b04fa83a7dad7202921, type: 3}
-  aimInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Aim Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 22c9d608-476a-4c0e-96c2-286002f2214e
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  reloadInput:
-    m_UseReference: 1
-    m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 2a3069ae-1e0a-4e3f-bae5-6cbb0889ade9
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -9144943221082601901, guid: 1c2a98e093ca7b04fa83a7dad7202921, type: 3}
-  damage: 5
-  range: 100
-  impactForce: 30
-  fireRate: 7
-  bulletSpreadAmount: 0.045
-  bulletsShot: 1
-  playerCamera: {fileID: 0}
-  muzzleFlash: {fileID: 1743301284569550, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}
-  impactEffect: {fileID: 1743301284569550, guid: e36ee662c26f30149900dded9f2c7086, type: 3}
-  bulletSpawn: {fileID: 6764421690513066384}
-  view: {fileID: 0}
-  target: {fileID: 0}
-  myWeaponHolder: {fileID: 7985684237217284468}
-  fovMultiplier: 1.5
-  spreadDivision: 2
-  SetInsteadOfDivide: 0
-  animationSpeed: 1
-  pause: {fileID: 0}
-  spawnMenu: {fileID: 0}
-  parentMuzzleFlash: 1
-  soundOnImpact: 1
-  maxAmmo: 30
-  reloadTime: 3
+  gun:
+    Mode: 0
+    ReloadTime: 0
+    FireRate: 0
+    Reloading: 0
+    Muzzle: {fileID: 0}
+    MuzzleFlash:
+      barcode: 
+      crate: {fileID: 0}
+    Smoke:
+      barcode: 
+      crate: {fileID: 0}
+  ammo:
+    MaxAmmo: 0
+    CurrentAmmo: 0
+    RoundsPerFire: 0
+    ReloadTime: 0
+    Spread: 0
+    Range: 0
+    ImpactForce: 0
+    Damage: 0
+    Reloading: 0
+    MuzzleFlash:
+      barcode: 
+      crate: {fileID: 0}
+    Smoke:
+      barcode: 
+      crate: {fileID: 0}
+    ImpactEffect:
+      barcode: 
+      crate: {fileID: 0}
+  ShootEvent:
+    _PersistentCalls: []
+  ReloadEvent:
+    _PersistentCalls: []
+  HitEvent:
+    _PersistentCalls: []
+  firing: 0
 --- !u!82 &7878642502320473247
 AudioSource:
   m_ObjectHideFlags: 0
@@ -377,7 +331,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6673405502460083346, guid: db0ab4b14a4240d47a2280ca7c0d15cd, type: 2}
-  m_audioClip: {fileID: 8300000, guid: d544dfd1496f9ef44bf70ae7f58b20be, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d544dfd1496f9ef44bf70ae7f58b20be, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -464,27 +418,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4069196928198082195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4412372088613143654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters:
-  - Type: 9
-    SynchronizeType: 1
-    Name: Shoot
-  m_SynchronizeLayers:
-  - SynchronizeType: 0
-    LayerIndex: 0
 --- !u!1 &6628245684204487699
 GameObject:
   m_ObjectHideFlags: 0

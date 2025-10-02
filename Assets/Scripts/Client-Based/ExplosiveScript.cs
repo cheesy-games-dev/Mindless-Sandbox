@@ -64,17 +64,16 @@ public class ExplodeScript : MonoBehaviour, ICrateBarcode
         }
     }
 
-    void ICrateBarcode.Start()
+    void Start()
     {
-        OnValidate();
+        Validate();
         countdown = delay;
     }
 
-    public void OnValidate()
+    public void Validate()
     {
         if (explosionVFX.Crate)
             explosionVFX.Barcode = explosionVFX.Crate.Barcode;
-        gameObject.name = $"Crate Spawner ({explosionVFX.Barcode})";
         AssetWarehouse.Instance.TryGetCrate<Crate>(explosionVFX.Barcode, out var crate);
     }
 }

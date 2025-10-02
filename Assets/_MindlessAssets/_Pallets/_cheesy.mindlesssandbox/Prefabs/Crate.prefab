@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 1286884058578150910}
   - component: {fileID: 2865708772332641064}
   - component: {fileID: 3674682994538089730}
-  - component: {fileID: 1774173817472387424}
   - component: {fileID: 683768195883677077}
   - component: {fileID: 1638658397371547654}
   - component: {fileID: 5662982764566801727}
+  - component: {fileID: 5895333860171393669}
   m_Layer: 3
   m_Name: Crate
   m_TagString: Untagged
@@ -140,52 +140,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &1774173817472387424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5060269952937970763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bde79fa976d8034aaa2bc3f036b4c8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  deathParticle: {fileID: 5060786358402759566, guid: df9b480865fd784419acd7b85d812af1, type: 3}
-  deathObject: {fileID: 0}
-  DamageEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  DeathEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1774173817472387424}
-        m_TargetAssemblyTypeName: WeaponTarget, Assembly-CSharp
-        m_MethodName: Delete
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  RespawnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  view: {fileID: 0}
-  damageVignette: {fileID: 0}
-  healthBar: {fileID: 0}
-  isPlayer: 0
-  canRespawn: 0
-  defaultSpawnPoint:
-  - {fileID: 0}
-  respawnBtn: {fileID: 0}
-  isDead: 0
-  error: none
 --- !u!114 &683768195883677077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,3 +187,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSpawned: 0
+--- !u!114 &5895333860171393669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5060269952937970763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fedff707e48b0ee4888280ffbf82c165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+  startingHealth: 20
+  currentHealth: 0
+  OnDamaged:
+    _PersistentCalls: []
+  OnDeath:
+    _PersistentCalls: []

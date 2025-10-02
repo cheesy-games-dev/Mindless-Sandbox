@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 5872136826416261268}
   - component: {fileID: 8629403431309968882}
   m_Layer: 0
-  m_Name: SprayCan
+  m_Name: Crate Spawner ()
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,66 +197,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064370a83d68ef34ba6761a444b0d821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holderAnimator: {fileID: 0}
-  shootInput:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Shoot Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 9a4f7ce3-e426-45cd-bef9-a5a7c9914b2a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 636311796354552635, guid: 1c2a98e093ca7b04fa83a7dad7202921, type: 3}
-  aimInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Aim Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: f57bcfba-8474-4a0f-ae6f-0f5c50c0900a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 5945210674119568959, guid: 1c2a98e093ca7b04fa83a7dad7202921, type: 3}
-  reloadInput:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Reload Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 98d39bb6-a8f0-4921-aac5-0323ea7d80b5
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -9144943221082601901, guid: 1c2a98e093ca7b04fa83a7dad7202921, type: 3}
-  damage: 0
-  range: 7.5
-  impactForce: 0
-  fireRate: 20
-  bulletSpreadAmount: 0
-  bulletsShot: 1
-  playerCamera: {fileID: 0}
-  muzzleFlash: {fileID: 4513546007993667567, guid: 41b02f83c5104f74b8cca35d301bc57d, type: 3}
-  impactEffect: {fileID: 7756164800232997884, guid: ea8ce0aa046c1b8448642a1ad6076e93, type: 3}
-  bulletSpawn: {fileID: 5174194328754755362}
-  view: {fileID: 0}
-  target: {fileID: 0}
-  myWeaponHolder: {fileID: 8818470560404187970}
-  fovMultiplier: 1.5
-  spreadDivision: 0
-  SetInsteadOfDivide: 0
-  animationSpeed: 1
-  pause: {fileID: 0}
-  spawnMenu: {fileID: 0}
-  parentMuzzleFlash: 0
-  soundOnImpact: 0
-  maxAmmo: 1
-  reloadTime: 0
+  gun:
+    Mode: 0
+    ReloadTime: 0
+    FireRate: 0
+    Reloading: 0
+    Muzzle: {fileID: 0}
+    MuzzleFlash:
+      barcode: 
+      crate: {fileID: 0}
+    Smoke:
+      barcode: 
+      crate: {fileID: 0}
+  ammo:
+    MaxAmmo: 0
+    CurrentAmmo: 0
+    RoundsPerFire: 0
+    ReloadTime: 0
+    Spread: 0
+    Range: 0
+    ImpactForce: 0
+    Damage: 0
+    Reloading: 0
+    MuzzleFlash:
+      barcode: 
+      crate: {fileID: 0}
+    Smoke:
+      barcode: 
+      crate: {fileID: 0}
+    ImpactEffect:
+      barcode: 
+      crate: {fileID: 0}
+  ShootEvent:
+    _PersistentCalls: []
+  ReloadEvent:
+    _PersistentCalls: []
+  HitEvent:
+    _PersistentCalls: []
+  firing: 0
 --- !u!1 &7375952088581384843
 GameObject:
   m_ObjectHideFlags: 0
